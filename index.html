@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPlus - Your Health, Our Priority</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediPlus</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#showcase" class="nav-link">App Preview</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 1000+ Users</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Your Health,</span>
+                    <span class="title-line highlight">Our Priority</span>
+                </h1>
+                <p class="hero-description">
+                    A comprehensive health management app that puts you in control of your medical records, 
+                    appointments, and healthcare journey. Experience the future of healthcare management.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#showcase" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        <span>Learn More</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Reports Uploaded</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-container">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="screen-header">
+                                <div class="status-bar">
+                                    <span class="time">9:41</span>
+                                    <div class="status-icons">
+                                        <i class="fas fa-signal"></i>
+                                        <i class="fas fa-wifi"></i>
+                                        <i class="fas fa-battery-three-quarters"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="app-header">
+                                    <div class="user-info">
+                                        <div class="avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4>Sarah Wilson</h4>
+                                            <p>Kathmandu, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <button class="action-btn">
+                                            <i class="fas fa-bell"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-cards">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-file-medical"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <span class="stat-number">12</span>
+                                            <span class="stat-label">Reports</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-calendar"></i>
+                                        </div>
+                                        <div class="stat-info">
+                                            <span class="stat-number">3</span>
+                                            <span class="stat-label">Appointments</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recent-activity">
+                                    <h4>Recent Activity</h4>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </div>
+                                        <div class="activity-details">
+                                            <p>Blood test report uploaded</p>
+                                            <span>2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-calendar"></i>
+                                        </div>
+                                        <div class="activity-details">
+                                            <p>Appointment confirmed with Dr. Johnson</p>
+                                            <span>1 day ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Features</span>
+                </div>
+                <h2 class="section-title">Comprehensive Health Management</h2>
+                <p class="section-description">
+                    Everything you need to manage your health and medical records in one secure, 
+                    easy-to-use application designed for modern healthcare.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>Upload Medical Reports</h3>
+                    <p>Securely upload and organize your medical reports, lab results, and health documents. Support for PDF and image formats with automatic categorization and smart organization.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">PDF Support</span>
+                        <span class="highlight">Auto Categorization</span>
+                        <span class="highlight">Secure Storage</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment Management</h3>
+                    <p>Book, manage, and track your medical appointments with ease. Get smart reminders, reschedule effortlessly, and view your complete appointment history in one place.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">Smart Reminders</span>
+                        <span class="highlight">Easy Rescheduling</span>
+                        <span class="highlight">History Tracking</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Doctor Sharing</h3>
+                    <p>Share your medical reports with doctors using QR code scanning technology. Grant temporary, secure access to your health records for better consultation and care.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">QR Code Sharing</span>
+                        <span class="highlight">Temporary Access</span>
+                        <span class="highlight">Secure Sharing</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Management</h3>
+                    <p>Manage health records for your entire family with ease. Switch between profiles seamlessly and keep track of everyone's medical information in one secure location.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">Multi-Profile</span>
+                        <span class="highlight">Family Dashboard</span>
+                        <span class="highlight">Easy Switching</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Notifications</h3>
+                    <p>Stay updated with intelligent notifications for appointment reminders, report sharing updates, and important health events. Never miss a critical health moment.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">Smart Alerts</span>
+                        <span class="highlight">Customizable</span>
+                        <span class="highlight">Real-time</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Your health data is protected with enterprise-grade security measures. All information is encrypted, stored securely, and complies with healthcare privacy standards.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight">End-to-End Encryption</span>
+                        <span class="highlight">HIPAA Compliant</span>
+                        <span class="highlight">Secure Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <div class="section-badge">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>App Preview</span>
+                    </div>
+                    <h2>Experience MediPlus</h2>
+                    <p>See how our intuitive interface makes managing your health simple and efficient. Every feature is designed with your convenience in mind.</p>
+                    
+                    <div class="showcase-features">
+                        <div class="showcase-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4>Intuitive Design</h4>
+                                <p>Clean, modern interface that's easy to navigate</p>
+                            </div>
+                        </div>
+                        <div class="showcase-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4>Fast Performance</h4>
+                                <p>Lightning-fast loading and smooth interactions</p>
+                            </div>
+                        </div>
+                        <div class="showcase-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4>Offline Support</h4>
+                                <p>Access your data even without internet connection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-visual">
+                    <div class="phone-showcase">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="screen-content">
+                                    <div class="app-header">
+                                        <div class="user-info">
+                                            <div class="avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="user-details">
+                                                <h4>Sarah Wilson</h4>
+                                                <p>Kathmandu, Nepal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stats-cards">
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-file-medical"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">12</span>
+                                                <span class="stat-label">Reports</span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-icon">
+                                                <i class="fas fa-calendar"></i>
+                                            </div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">3</span>
+                                                <span class="stat-label">Appointments</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recent-activity">
+                                        <h4>Recent Activity</h4>
+                                        <div class="activity-item">
+                                            <div class="activity-icon">
+                                                <i class="fas fa-upload"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <p>Blood test report uploaded</p>
+                                                <span>2 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item">
+                                            <div class="activity-icon">
+                                                <i class="fas fa-calendar"></i>
+                                            </div>
+                                            <div class="activity-details">
+                                                <p>Appointment confirmed with Dr. Johnson</p>
+                                                <span>1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Testimonials</span>
+                </div>
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-description">
+                    Don't just take our word for it. Here's what our users have to say about their experience with MediPlus.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"MediPlus has completely transformed how I manage my family's health records. The QR code sharing feature is a game-changer for doctor visits!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Mother of 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The appointment management system is so intuitive. I never miss appointments anymore, and the rescheduling feature is incredibly convenient."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>Business Professional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"As a senior citizen, I was worried about using technology for health management. MediPlus made it so simple and user-friendly!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Meera Devi</h4>
+                            <span>Retired Teacher</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Health Management?</h2>
+                <p>Join thousands of users who are already managing their health more effectively with MediPlus.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>Get Started Today</span>
+                    </a>
+                    <a href="#showcase" class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediPlus</span>
+                    </div>
+                    <p>Your comprehensive health management solution. We're committed to making healthcare more accessible and organized for everyone.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#features">Medical Reports</a></li>
+                        <li><a href="#features">Appointments</a></li>
+                        <li><a href="#features">Doctor Sharing</a></li>
+                        <li><a href="#features">Family Management</a></li>
+                        <li><a href="#features">Notifications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@mediplus.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+977 1 234 5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Baneshwor, Kathmandu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediPlus. All rights reserved. Made with <i class="fas fa-heart"></i> for better healthcare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
