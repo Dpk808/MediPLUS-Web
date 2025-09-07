@@ -124,4 +124,3 @@ This project is created for presentation purposes. All rights reserved.
 
 ---
 
-**Made with ❤️ for better healthcare presentation**
