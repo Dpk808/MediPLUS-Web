@@ -21,6 +21,8 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#showcase" class="nav-link">App Preview</a>
+                <a href="#" class="nav-link open-appointments" data-open="appointments">Appointments</a>
+                <a href="#" class="nav-link open-reports" data-open="reports">Reports</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -96,6 +98,7 @@
                                 </div>
                             </div>
                             <div class="screen-content">
+                                <div class="phone-default">
                                 <div class="app-header">
                                     <div class="user-info">
                                         <div class="avatar">
@@ -154,6 +157,15 @@
                                             <span>1 day ago</span>
                                         </div>
                                     </div>
+                                </div>
+                                </div>
+                                <div class="phone-preview" aria-hidden="true">
+                                    <button class="phone-preview-back" type="button" aria-label="Back to dashboard">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span>Back</span>
+                                    </button>
+                                    <img src="assets/reports.jpeg" alt="Reports preview" class="phone-preview-image phone-preview-reports" loading="lazy" />
+                                    <img src="assets/appointments.jpeg" alt="Appointments preview" class="phone-preview-image phone-preview-appointments" loading="lazy" />
                                 </div>
                             </div>
                         </div>
@@ -308,6 +320,7 @@
                         <div class="phone-frame">
                             <div class="phone-screen">
                                 <div class="screen-content">
+                                    <div class="phone-default">
                                     <div class="app-header">
                                         <div class="user-info">
                                             <div class="avatar">
@@ -361,6 +374,15 @@
                                                 <span>1 day ago</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    </div>
+                                    <div class="phone-preview" aria-hidden="true">
+                                        <button class="phone-preview-back" type="button" aria-label="Back to dashboard">
+                                            <i class="fas fa-arrow-left"></i>
+                                            <span>Back</span>
+                                        </button>
+                                        <img src="assets/reports.jpeg" alt="Reports preview" class="phone-preview-image phone-preview-reports" loading="lazy" />
+                                        <img src="assets/appointments.jpeg" alt="Appointments preview" class="phone-preview-image phone-preview-appointments" loading="lazy" />
                                     </div>
                                 </div>
                             </div>
@@ -552,6 +574,43 @@
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- App Interface Modal -->
+    <div class="app-modal" id="appModal" aria-hidden="true" role="dialog" aria-labelledby="appModalTitle">
+        <div class="app-modal-backdrop" id="appModalBackdrop"></div>
+        <div class="app-modal-dialog" role="document">
+            <div class="app-modal-header">
+                <h3 id="appModalTitle">Explore the App</h3>
+                <button class="app-modal-close" id="appModalClose" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="app-modal-tabs" role="tablist">
+                <button class="app-tab active" role="tab" aria-selected="true" data-tab="appointments">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Appointments</span>
+                </button>
+                <button class="app-tab" role="tab" aria-selected="false" data-tab="reports">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Reports</span>
+                </button>
+            </div>
+            <div class="app-modal-content">
+                <div class="app-view app-view-appointments active" role="tabpanel" aria-labelledby="appointments">
+                    <img src="assets/appointments.jpeg" alt="Appointments preview" class="app-view-image" loading="lazy" />
+                </div>
+                <div class="app-view app-view-reports" role="tabpanel" aria-labelledby="reports">
+                    <img src="assets/reports.jpeg" alt="Reports preview" class="app-view-image" loading="lazy" />
+                </div>
+            </div>
+            <div class="app-modal-footer">
+                <button class="btn btn-primary app-cta" id="ctaGetStarted">
+                    <i class="fas fa-rocket"></i>
+                    <span>Get Started</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

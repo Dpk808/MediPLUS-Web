@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,
         offset: 100
     });
+    // App modal wires
+    initAppModal();
 });
 
 // Navbar scroll effect
@@ -408,3 +410,100 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error initializing website:', error);
     }
 });
+
+// Interactive App Modal
+function initAppModal() {
+    const modal = document.getElementById('appModal');
+    const modalBackdrop = document.getElementById('appModalBackdrop');
+    const modalClose = document.getElementById('appModalClose');
+    const tabs = document.querySelectorAll('.app-tab');
+    const views = {
+        appointments: document.querySelector('.app-view-appointments'),
+        reports: document.querySelector('.app-view-reports')
+    };
+
+    function openModal(tab = 'appointments') {
+        if (!modal) return;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        switchTab(tab);
+        // focus first interactive element
+        const firstTab = document.querySelector(`.app-tab[data-tab="${tab}"]`);
+        if (firstTab) firstTab.focus();
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    function switchTab(tab) {
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+        Object.entries(views).forEach(([key, el]) => {
+            if (!el) return;
+            el.classList.toggle('active', key === tab);
+        });
+    }
+
+    // Hook nav links
+    document.querySelectorAll('.open-appointments').forEach(el => {
+        el.addEventListener('click', (e) => { e.preventDefault(); openModal('appointments'); });
+    });
+    document.querySelectorAll('.open-reports').forEach(el => {
+        el.addEventListener('click', (e) => { e.preventDefault(); openModal('reports'); });
+    });
+
+    // Hook stat cards as quick entry
+    document.querySelectorAll('.stat-card').forEach(card => {
+        const label = (card.querySelector('.stat-label') || {}).textContent || '';
+        card.addEventListener('click', () => {
+            // Prefer inline phone preview when available
+            const screen = card.closest('.phone-screen');
+            if (screen) {
+                const content = screen.querySelector('.screen-content');
+                const phoneDefault = content.querySelector('.phone-default');
+                const phonePreview = content.querySelector('.phone-preview');
+                const reportsImg = content.querySelector('.phone-preview-reports');
+                const apptsImg = content.querySelector('.phone-preview-appointments');
+
+                if (phoneDefault && phonePreview) {
+                    phoneDefault.classList.add('hidden');
+                    phonePreview.classList.add('active');
+                    const backBtn = phonePreview.querySelector('.phone-preview-back');
+                    if (backBtn) {
+                        backBtn.onclick = () => {
+                            // restore default dashboard
+                            phonePreview.classList.remove('active');
+                            phoneDefault.classList.remove('hidden');
+                            const reports = phonePreview.querySelector('.phone-preview-reports');
+                            const appts = phonePreview.querySelector('.phone-preview-appointments');
+                            if (reports) reports.style.display = 'none';
+                            if (appts) appts.style.display = 'none';
+                        };
+                    }
+                    if (/appointment/i.test(label) && apptsImg) {
+                        apptsImg.style.display = 'block';
+                        if (reportsImg) reportsImg.style.display = 'none';
+                    } else if (/report/i.test(label) && reportsImg) {
+                        reportsImg.style.display = 'block';
+                        if (apptsImg) apptsImg.style.display = 'none';
+                    }
+                    return; // Do not open modal if inline preview handled
+                }
+            }
+            if (/appointment/i.test(label)) openModal('appointments');
+            else if (/report/i.test(label)) openModal('reports');
+        });
+    });
+
+    // Tab clicks
+    tabs.forEach(tabBtn => {
+        tabBtn.addEventListener('click', () => switchTab(tabBtn.dataset.tab));
+    });
+
+    // Close actions
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+}
